@@ -1,0 +1,7 @@
+{
+  "name": "ionic-chuck-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

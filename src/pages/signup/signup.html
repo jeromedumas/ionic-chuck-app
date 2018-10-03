@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>S'inscrire</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-row margin-top>
+    <ion-col text-center>
+      <h1>Rejoignez la communauté des fans de Chuck Norris</h1>
+    </ion-col>
+  </ion-row>
+
+  <ion-row padding>
+    <ion-col col-4 offset-4>
+      <img src="http://www.precision-spine.com/wp-content/uploads/2015/09/person-icon.png" />
+    </ion-col>
+  </ion-row>
+
+  <form [formGroup]="signupForm">
+
+    <ion-row>
+      <ion-col>
+        <ion-item-group>
+
+          <ion-item>
+            <ion-label stacked>Nom d'utilisateur</ion-label>
+            <ion-input type="text" formControlName="username"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label stacked>Mot de passe</ion-label>
+            <ion-input type="text" formControlName="password"></ion-input>
+          </ion-item>
+
+        </ion-item-group>
+      </ion-col>
+    </ion-row>
+
+  </form>
+
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button full [disabled]="!signupForm.valid" (click)="onSignup()">
+    <ion-label>Enregistrer</ion-label>
+  </button>
+</ion-footer>

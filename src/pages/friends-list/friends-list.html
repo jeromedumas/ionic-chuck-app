@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button [menuToggle]="activeMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      La communauté des fans
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngIf="friends" no-margin no-padding>
+    <ion-list-header no-lines color="light">Par ordre alphabétique :</ion-list-header>
+    <ion-grid>
+      <ion-row no-padding no-margin *ngFor="let friend of friends | sortAsc:'username' ">
+        <ion-col col-1 text-center align-self-center no-padding>
+          <ion-icon color="primary" name="contact" class="icon-item"></ion-icon>
+        </ion-col>
+        <ion-col text-left>
+          <ion-item>
+            <h3>Nom d'utilisateur : {{ friend.username }}</h3>
+            <p *ngIf="friend.latitude && friend.longitude">Localisation : {{ friend.latitude }}, {{ friend.longitude }}</p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+</ion-content>

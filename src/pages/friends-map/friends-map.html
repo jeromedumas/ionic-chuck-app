@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button [menuToggle]="activeMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      La communauté des fans
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="setMyLocation()">
+      <ion-icon name="locate"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

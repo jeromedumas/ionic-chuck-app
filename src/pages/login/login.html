@@ -1,0 +1,58 @@
+and navigation.
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Authentification</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding no-bounce>
+
+  <ion-row margin-top>
+    <ion-col text-center>
+      <h1>Veuillez vous authentifier</h1>
+    </ion-col>
+  </ion-row>
+
+  <ion-row padding>
+    <ion-col col-4 offset-4>
+      <img src="assets/imgs/person-icon.png" />
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item-group>
+
+        <ion-item>
+          <ion-label>Utilisateur :</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Mot de passe :</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+
+      </ion-item-group>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button block (click)="onLogin()">Se connecter</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button block (click)="onSignup()" color="light">S'inscire</button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row margin-top>
+    <ion-col>
+      <i>Chuck Norris ne se connecte pas à Internet. Tout le monde se connecte à Chuck Norris.</i>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
